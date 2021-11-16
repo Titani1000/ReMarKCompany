@@ -1,0 +1,86 @@
+// ボタン要素左から右へ塗りつぶし
+.btn {
+  position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	display: inline-block;
+  border: 1px solid $cChara;
+  padding: 10px 50px;
+  text-align: center;
+  outline: none;
+  transition: ease .2s;
+
+  span {
+    position: relative;
+    z-index: 3;
+    color: $cChara;
+    font-family: 'Scheherazade New', serif;
+    font-size: 20px;
+  }
+  
+  &:hover span{
+    color:#fff;
+  }
+}
+.borderleft:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: $cChara;
+  width: 100%;
+  height: 100%;
+  transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+
+.borderleft:hover:before{
+	transform-origin: left top;
+	transform: scale(1, 1);
+}
+
+
+// コンタクトフォーム用ボタン
+.contact_btn {
+  position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	display: inline-block;
+  border: 1px solid $cChara;
+  padding: 10px 60px;
+  color: $cChara;
+  font-family: 'Scheherazade New', serif;
+  font-size: 20px;
+  transition: all .6s;
+}
+.contact_btn:hover {
+  background: $cChara;
+  color: #fff;
+}
+
+// NEWS用個別ページに行くためのボタン要素
+.single_btn {
+  position: relative;
+	overflow: hidden;
+	text-decoration: none;
+	display: inline-block;
+  border: 1px solid $cChara;
+  padding: 5px 20px;
+  text-align: center;
+  outline: none;
+  transition: ease .2s;
+
+  span {
+    position: relative;
+    z-index: 3;
+    color: $cChara;
+    font-family: 'Scheherazade New', serif;
+    font-size: 20px;
+  }
+  
+  &:hover span{
+    color:#fff;
+  }
+}

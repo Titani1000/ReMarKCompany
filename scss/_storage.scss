@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+$cMain: #fff;
+$cChara: #0E192D;
+$cRed: #C9171E;
+
+.number {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.time {
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.topics {
+  font-size: 10px;
+  color: #C9171E;
+  padding: 3px;
+  border: 1px solid #C9171E;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.category {
+  font-size: 10px;
+  color: #C9171E;
+  padding: 3px;
+  border: 1px solid #C9171E;
+  font-weight: 600;
+  margin-right: 20px;
+}

@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+/* ============================= */
+/* トップ画像ファーストビュー */
+/* ============================= */
+#service_top {
+  background-size: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#service_view {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(../image/top/service_top.jpg) no-repeat top center;
+  background-size: cover;
+  transform-origin: center;
+}
+/* #service_top::before {
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height: 100vh;
+  background:url(../image/top/service_top.jpg) no-repeat center;
+  background-size:cover;
+} */
+
+/* ======================= */
+/* サービスコンテンツ部分 */
+/* ======================= */
+.description ul {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.description ul li {
+  width: 46%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  margin: 3% auto;
+}
+.description ul li h3 {
+  font-size: 20px;
+  padding: 10px 0;
+}
+.description ul li p {
+  padding: 10px 0;
+  font-size: 14px;
+}
+.description ul li:nth-of-type(2n) {
+  top: 50px;
+}
+
+/* 事業コンテンツ画像CSS */
+.description_img {
+  width: 100%;
+}
+.description_img img {
+  width: 100%;
+}
+
+/* レスポンシヴ対応 */
+@media screen and (max-width: 780px) {
+  .description ul {
+    width: 90%;
+  }
+  .description ul li {
+    width: 46%;
+  }
+  .description ul li p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .description {
+    margin: 50px auto;
+  }
+  .description ul {
+    width: 100%;
+  }
+  .description ul li {
+    width: 90%;
+    margin: 5% auto;
+  }
+  .description ul li p {
+    font-size: 12px;
+  }
+  .description ul li:nth-of-type(2n) {
+    top: 0;
+  }
+}
+
+/* ============= */
+/* 制作工程部分 */
+/* ============= */
+.process_area {
+  margin: 5% auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.process_area .process_card {
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  width: 50%;
+  padding: 30px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 40px rgba(0,0,0,0.1);
+}
+
+.process_area figure {
+  width: 50%;
+}
+.process_area figure img {
+  width: 100%;
+  max-width: 100%;
+  background-size: cover;
+  vertical-align: bottom;
+}
+.process_card h3 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+.process_card p {
+  font-size: 14px;
+}
+
+/* 偶数番目のカード要素を左右反対にする */
+.process_area:nth-child(2n) .process_card {
+  left: 10%;
+}
+.process_area:nth-child(2n) figure {
+  left: 50%;
+}
+
+/* 制作工程レスポンシヴ対応 */
+@media screen and (max-width: 1080px) {
+  .process_area figure {
+    width: 60%;
+  }
+  .process_area .process_card {
+    width: 60%;
+    padding: 20px;
+  }
+  .process_card h3 {
+    font-size: 20px;
+  }
+  .process_card p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .process_area figure {
+    width: 100%;
+  }
+  .process_area .process_card {
+    width: 100%;
+    left: 0;
+    position: unset;
+  }
+  .process_area:nth-child(2n) .process_card {
+    left: 0;
+  }
+  .process_area:nth-child(2n) figure {
+    left: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .process_area .process_card p {
+    font-size: 10px;
+  }
+}

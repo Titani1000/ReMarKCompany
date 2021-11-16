@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+ <meta charset="utf-8">
+ <title>株式会社ReMarK</title>
+ <meta name="description" content="株式会社ReMarKはお客様の想いを形にという経営理念を掲げて日々活動しています。「想いを形に、理想を実現する」この言葉を胸にお客様の理想を実現させていただきます。">
+ <meta name="keywords" content="Web制作,プログラミング,IT">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta property="og:title" content="想いを形に、株式会社ReMarK"> 
+ <meta property="og:type" content="article">
+ <meta property="og:url" content="https://sarucode.site">
+ <meta property="og:image" content="img/logo.png">
+ <meta property="og:description" content="株式会社ReMarKはお客様の想いを形にという経営理念を掲げて日々活動しています。「想いを形に、理想を実現する」この言葉を胸にお客様の理想を実現させていただきます。"> 
+ <meta property="og:site_name" content="株式会社ReMarK">
+ <!-- サイトアイコン(favicon.ico) -->
+ <link rel="icon" type="image/svg+xml" href="../image/decoration/codersrank.svg">
+ <link rel="apple-touch-icon" sizes="180*180" href="../image/decoration/codersrank.svg">
+ <!-- 共通CSSファイル -->
+ <link rel="stylesheet" type="text/css" href="../base/reset.css">
+ <link rel="stylesheet" type="text/css" href="../base/common.css">
+ <link rel="stylesheet" type="text/css" href="../base/parts.css">
+ <link rel="stylesheet" type="text/css" href="../base/motion.css">
+ <!-- タブ別CSSファイル -->
+ <link rel="stylesheet" type="text/css" href="../main/index.css">
+ <link rel="stylesheet" type="text/css" href="../main/about.css">
+ <link rel="stylesheet" type="text/css" href="../main/archive.css">
+ <link rel="stylesheet" type="text/css" href="../main/service.css">
+ <link rel="stylesheet" type="text/css" href="../main/contact.css">
+ <!-- SCSS読み込み変換用CSSファイル -->
+ <link rel="stylesheet" type="text/css" href="../css/style.css">
+ <!-- SCSSファイル -->
+ <link rel="stylesheet" type="text/scss" href="../scss/style.scss">
+ <link rel="stylesheet" type="text/scss" href="../scss/_common.scss">
+ <link rel="stylesheet" type="text/scss" href="../scss/_color.scss">
+ <link rel="stylesheet" type="text/scss" href="../scss/_mixin.scss">
+ <link rel="stylesheet" type="text/scss" href="../scss/_button.scss">
+ <!-- 外部リンクCDN -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+ </head>
+ <body>
+
+
+<!-- ローディング要素 -->
+<div id="splash"></div>
+  <div class="splashbg_left"></div>
+  <div class="splashbg_right"></div>
+<div id="container">
+
+ <!----- header----->
+ <header id="header">
+
+  <nav id="list" class="hMenu bottom_line">
+      <ul>
+        <li><a href="../index.html">TOP</a></li>
+        <li><a href="../page/about.html">ABOUT</a></li>
+        <li><a href="../page/archive.html">NEWS</a></li>
+        <li><a href="../page/service.html">SERVICE</a></li>
+        <li><a href="../page/contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- ヘッダーアイコン -->
+  <div class="fa_icon">
+    <ul>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+    </ul>
+  </div>
+
+  <!-- ハンバーガーメニュー要素 -->
+  <div class="menubtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- トップファーストビュー -->
+
+ </header>
+ <!----- /header ----->
+<!-- ファーストビュー要素トップ画像はタブごとに異なる -->
+<div id="service_top" class="common">
+  <div class="ttl_block">
+    <h1>SERVICE</h1>
+  </div>
+  <div id="service_view"></div>
+  <a href="#">Scroll</a>
+</div>
+
+ <!----- main ----->
+ <main id="fixation">
+  <section id="business" class="wrapper">
+    <h2 class="heading">Business Description<span>事業内容</span></h2>
+
+  <div class="description">
+    <ul>
+      <!-- 事業内容説明カード要素1番目 -->
+      <li class="zoomInTrigger zoomIn motion_delay02">
+        <h3>WEBサイト構築</h3>
+        <div class="description_img"><img src="../image/illustrations_svg/Website_setup.svg" alt=""></div>
+        <p>Webサイトの新規構築/リニューアル等<br>
+          お客様の目的を明確にし、<br>
+          考えに沿った最適なデザインの作成をご提案いたします。</p>
+      </li>
+      <!-- 事業内容説明カード要素2番目 -->
+      <li class="zoomInTrigger zoomIn motion_delay04">
+        <h3>アプリ開発</h3>
+        <div class="description_img"><img src="../image/illustrations_svg/app.svg" alt=""></div>
+        <p>オーダーメイドで開発するネイティブアプリや、<br>
+          ストアからインストールする必要がないWebブラウザ上で提供できる<br>
+          アプリを開発いたします。</p>
+      </li>
+      <!-- 事業内容説明カード要素3番目 -->
+      <li class="zoomInTrigger zoomIn motion_delay06">
+        <h3>システム構築</h3>
+        <div class="description_img"><img src="../image/illustrations_svg/system.svg" alt=""></div>
+        <p>CMS、会員管理システム、ECサイト、業務システム構築<Br>
+          などの開発に対応しています。</p>
+      </li>
+      <!-- 事業内容説明カード要素4番目 -->
+      <li class="zoomInTrigger zoomIn motion_delay06">
+        <h3>グラフィックデザイン</h3>
+        <div class="description_img"><img src="../image/illustrations_svg/graphic.svg" alt=""></div>
+        <p>実績豊富なグラフィックデザイナーや<br>
+          イラストレーターがシーンに合わせた作品<br>
+          最新技術の導入もしています。</p>
+      </li>
+    </ul>
+  </div>
+  </section>
+
+  <section id="production" class="wrapper">
+    <h2 class="heading">Fllow of Production<span>制作工程</span></h2>
+
+    <div class="production_all yohaku">
+      <div class="process_area">
+
+        <figure class="bgextend bgLRextendTrigger">
+          <span class="bgappearTrigger"><img src="../image/service/project.jpg" alt="サービス画像1"></span>
+        </figure>
+        <div class="process_card flipLeft flipTrigger">
+          <span class="number">-01-</span>
+            <h3>ヒアリング/プランニング</h3>
+            <p>お客様からヒアリングした内容をもとに到達する目標を明確にします。<br>
+              どのような手法を使って目標を達成するか、どのような路線で作成していくのか<Br>
+              具体的な計画をご提案します。
+            </p>
+            <!-- <img class="floatUp" src="./image/decoration/1.png" alt=""> -->
+        </div>
+      </div>
+
+      <div class="process_area">
+        <figure class="bgextend bgLRextendTrigger">
+          <span class="bgappearTrigger"><img src="../image/service/design.jpg" alt="サービス画像1"></span>
+        </figure>
+        <div class="process_card flipLeft flipTrigger">
+          <span class="number">-02-</span>
+            <h3>デザイン作成</h3>
+            <p>お客様のご要望、目的、ターゲット層、ユーザビリティ、<br>
+              競合他社、最新の技術やトレンド、リリース後の運用など、<br>
+              様々な面を考慮してお客様とユーザー双方にとって最適なデザインの作成を目指します。
+            </p>
+            <!-- <img class="floatUp" src="./image/decoration/1.png" alt=""> -->
+        </div>
+      </div>
+
+      <div class="process_area">
+        <figure class="bgextend bgLRextendTrigger">
+          <span class="bgappearTrigger"><img src="../image/service/create.jpg" alt="サービス画像1"></span>
+        </figure>
+        <div class="process_card flipLeft flipTrigger">
+          <span class="number">-03-</span>
+            <h3>構築/マークアップ</h3>
+            <p>デザイナー、プログラマーと密接に連携し、<br>
+              問題点を素早く共有・解決しながら構築を行います。<br>
+              Webサイト制作では、コーディングのルール動向を常にチェックし、<br>
+              正しい記述でマークアップすることに加えて、<br>
+              変化しやすい検索条件を考慮した最適なSEO対策を施しながらマークアップを行います。
+            </p>
+            <!-- <img class="floatUp" src="./image/decoration/1.png" alt=""> -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+ </main>
+ <!----- /main ----->
+ 
+ <!----- footer ----->
+ <footer id="footer">
+<div class="footer_list">
+  <h2>株式会社ReMarK</h2>
+
+  <div class="bottom_line">
+    <ul>
+      <li><a href="../index.html">TOP</a></li>
+      <li><a href="../page/about.html">ABOUT</a></li>
+      <li><a href="../page/archive.html">NEWS</a></li>
+      <li><a href="../page/service.html">SERVICE</a></li>
+      <li><a href="../page/contact.html">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <div class="fa_icon">
+    <ul>
+      <li><a href=""><i class="fab fa-twitter"></i></a></li>
+      <li><a href=""><i class="fab fa-instagram"></i></a></li>
+      <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+    </ul>
+  </div>
+
+  <small>© ReMarK all rights reserved<span>こちらのサイトは架空のサイトです。</span></small>
+</div>
+ </footer>
+ <!----- /footer ----->
+
+</div><!-- ローディング閉じタグ -->
+
+  <!-- 外部CDN読み込み用 jQ -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!-- Javascript用ファイル -->
+  <script src="../js/main.js"></script>
+ </body>
+</html>

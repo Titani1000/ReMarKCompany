@@ -1,0 +1,637 @@
+@charset "UTF-8";
+
+/* トップページ専用ローディングアニメーション */
+#top_splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #0E192D;
+	z-index: 9999999;
+	text-align: center;
+	color:#fff;
+}
+#splash_logo {
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  font-family: 'Scheherazade New', serif;
+  font-size: 40px;
+}
+
+@media screen and (max-width: 480px) {
+  #splash_logo {
+    font-size: 20px;
+  }
+}
+
+/* ============================= */
+/* トップ画像ファーストビュー */
+/* ============================= */
+#top {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#top_view {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(../image/top/remark_top.jpg) no-repeat top center;
+  background-size: cover;
+  transform-origin: center;
+}
+
+/* ========================= */
+/* IT企業キャッチコピー部分 */
+/* ========================= */
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* キャッチコピー左側文字部分 */
+.philoshy_text {
+  text-align: left;
+  width: 50%;
+  font-family: 'Scheherazade New', serif;
+  z-index: 1;
+}
+.philoshy_text::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  top: 0;
+  left: -15%;
+  background: #f2f2f2 url(../image/decoration/noiz.jpg);
+  z-index: -10;
+}
+.philoshy_text h2 {
+  font-size: 80px;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+}
+.philoshy_text h2::after {
+  content: '';
+  position: absolute;
+  border: 1px solid #0E192D;
+  width: 20%;
+  height: 5px;
+  top: 50%;
+}
+.philoshy_text h3 {
+  font-size: 38px;
+}
+.philoshy_text h4 {
+  font-size: 30px;
+  font-weight: normal;
+  color: #777;
+}
+.philoshy_text p {
+  font-size: 20px;
+  line-height: 3em;
+  margin-bottom: 2em;
+}
+
+/* キャッチコピー左側文字部分レスポンシヴ */
+@media screen and (max-width: 780px) {
+  .philoshy_text h2 {
+    font-size: 50px;
+  }
+  .philoshy_text h3 {
+    font-size: 25px;
+  }
+  .philoshy_text h4 {
+    font-size: 18px;
+  }
+  .philoshy_text p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .philoshy_text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+
+  .philoshy_text::before {
+    display: none;
+  }
+  .philoshy_text h2::after {
+    display: none;
+  }
+  .philoshy_text h4 {
+    margin-right: 10px;
+  }
+
+  .philoshy_img {
+    opacity: 0.6;
+  }
+  .philoshy_img::before {
+    display: none;
+  }
+  .philoshy_img::after {
+    display: none;
+  }
+
+}
+
+/* キャッチコピー右側画像 */
+.philoshy_img {
+  background: url(../image/few/performance.jpg) no-repeat center;
+  width: 50%;
+  height: 100vh;
+  background-size: cover;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+}
+.philoshy_img img {
+  width: 100%;
+}
+
+.philoshy_img::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  right: -20%;
+  background: #f2f2f2 url(../image/decoration/noiz.jpg);
+  z-index: -99;
+}
+.philoshy_img::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: -20%;
+  background: #f2f2f2 url(../image/decoration/noiz.jpg);
+  z-index: -99;
+}
+
+/* キャッチコピー画像部分レスポンシヴ */
+@media screen and (max-width: 480px) {
+  .philoshy_img {
+    width: 100%;
+  }
+}
+
+/* ================================================ */
+/* About要素の下 Regarding the remark部分のcss要素 */
+/* ================================================ */
+.sub_ttl p {
+  font-size: 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  padding: 0 0 0 10%;
+  margin: 1em 0;
+}
+@media screen and (max-width: 480px) {
+  .sub_ttl p {
+   font-size: 10px;
+   font-weight: normal; 
+  }
+}
+
+/* サブタイトル下のカード要素 */
+.sub_content {
+  margin: 100px 0;
+}
+.sub_area {
+  justify-content: center;
+  display: flex;
+}
+
+.sub_area li {
+  width: 280px;
+  max-width: 280px;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.sub_area li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: #0E192D transparent transparent;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+}
+.sub_area li h3 {
+  font-size: 16px;
+}
+.sub_area li p {
+  font-size: 14px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: normal;
+}
+.sub_img {
+  width: 100%;
+  margin: 10% auto;
+}
+.sub_img img {
+  height: 180px;
+  width: 100%;
+}
+
+
+/* サブコンテンツ位置調整デスクトップ用 */
+.sub_area li:nth-child(2) {
+  top: -50px;
+  margin: 0 2%;
+}
+.sub_area li:nth-child(3) {
+  top: -100px;
+  margin: 0 2% 0 0;
+}
+.sub_area li:nth-child(4) {
+  top: -150px;
+}
+
+/* サブコンテンツアフター背景装飾要素 */
+.sub_content::after {
+  content: '';
+  background: #f2f2f2 url(../image/decoration/noiz.jpg);
+  position: absolute;
+  width: 90%;
+  height: 120%;
+  top: -100px;
+  right: -4%;
+  z-index: -99;
+}
+
+/* サブコンテンツカード要素レスポンシヴ */
+@media screen and (max-width:780px) {
+  .sub_area {
+    flex-wrap: wrap;
+  }
+  .sub_area li {
+    margin: 3% 3%;
+  }
+  .sub_area li:nth-child(2) {
+    top: 0;
+    margin: 3% 3%;
+  }
+  .sub_area li:nth-child(3) {
+    top: 0;
+    margin: 3% 3%;
+  }
+  .sub_area li:nth-child(4) {
+    top: 0;
+    margin: 3% 3%;
+  }
+}
+
+/* ======================= */
+/* サービス紹介コンテンツ */
+/* ======================= */
+#service {
+  position: relative;
+}
+#service::before {
+  content: '';
+  background: #f2f2f2 url(../image/decoration/noiz.jpg);
+  width: 40%;
+  height: 80vh;
+  position: absolute;
+  background-attachment: fixed;
+  left: 0;
+  z-index: -99;
+}
+#service::after {
+  content: '';
+  background: #f2f2f2 url(../image/decoration/noiz.jpg);
+  width: 40%;
+  height: 80vh;
+  position: absolute;
+  background-attachment: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -99;
+}
+.service_area {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 5% auto 10% auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* サービスエリア デコレーション要素 */
+.dec_img {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  top: 0;
+  right: 0;
+  z-index: -10;
+}
+.dec_img img {
+  width: 100%;
+}
+.service_area:nth-child(2n+1) .dec_img {
+  left: 0;
+}
+/* サービスエリアの画像大きさ調整 */
+.service_area figure {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  line-height: 0;
+}
+.service_area figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.service_area:nth-child(2n+1) figure {
+  left: 40%;
+}
+/* サービス画像レスポンシヴ */
+@media screen and (max-width: 780px) {
+  .service_area:nth-child(2n+1) figure {
+    left: 40%;
+  }
+}
+
+/* サービスエリアテキストカード */
+.service_area .service_card {
+  position: absolute;
+  bottom: -10%;
+  left: 40%;
+  width: 50%;
+  padding: 30px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 40px rgba(0,0,0,0.1);
+}
+
+.service_area:nth-child(2n+1) .service_card {
+  left: inherit;
+  right: 40%;
+}
+
+/* サービステキストカード中身 */
+.service_card .service_ttl h3 {
+  font-size: 45px;
+  margin: auto 0;
+  font-family: 'Scheherazade New', serif;
+}
+.service_card .service_ttl p {
+  display: grid;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* サービスエリア装飾要素 */
+.service_card img {
+  position: absolute;
+  top: -30%;
+  right: 0;
+  height: 140px;
+}
+
+/* サービス要素全体レスポンシヴ */
+@media  screen and (max-width: 780px) {
+  .service_area .service_card {
+    left: 50%;
+  }
+  .service_area:nth-child(2n+1) .service_card {
+    left: inherit;
+    right: 50%;
+  }
+  .service_card .service_ttl h3 {
+    font-size: 28px;
+  }
+  .service_card img {
+    height: 100px;
+    top: -10%;
+  }
+}
+
+/* サービス要素スマホ版レスポンシヴ対応 */
+@media screen and (max-width: 480px) {
+  .service_area {
+    margin: 20% auto;
+  }
+  .service_area figure {
+    width: 100%;
+  }
+  .service_area .service_card {
+    width: 100%;
+    left: 0;
+    position: unset;
+  }
+
+  .service_area:nth-child(2n+1) .service_card {
+    right: 0;
+  }
+  .service_area:nth-child(2n+1) figure {
+    left: 0;
+  }
+
+  /* サービスタイトル要素 */
+  .service_card .service_ttl h3 {
+    font-size: 24px;
+  }
+  .service_card .service_ttl p {
+    font-size: 12px;
+  }
+}
+
+/* サービス要素ボタン位置調整 */
+#service .btn {
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+}
+
+/* ================= */
+/* お知らせ発信部分 */
+/* ================= */
+.news_row {
+  margin: 5% auto;
+}
+.news_row ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.news_row ul li {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+  width: 23%;
+  background: #fff;
+  border: 1px solid #ccc;
+  transition: ease .2s;
+}
+.bgskew::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -130%;
+  background: #0E192D;
+  opacity: 0.8;
+  width: 120%;
+  height: 100%;
+  transform: skewX(-25deg);
+}
+.bgskew:hover::before {
+  animation: skewanime .5s forwards;
+}
+@keyframes skewanime {
+  100% {
+    left: -10%;
+  }
+}
+/* お知らせ要素 fadeUp順番に来るよう調整CSS */
+.news_row ul li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.news_row ul li:nth-child(2) {
+  animation-delay: .4s;
+}
+.news_row ul li:nth-child(3) {
+  animation-delay: .6s;
+}
+.news_row ul li:nth-child(4) {
+  animation-delay: .8s;
+}
+
+/* 偶数番目は凹になるよう調整 */
+.news_row ul li:nth-child(2n) {
+  top: 50px;
+}
+
+/* news画像 */
+.news_img img  {
+  width: 100%;
+  height: 100%;
+}
+.news_img:hover {
+  opacity: 0.8;
+}
+
+.news_meta {
+  padding: 10px 20px 20px 20px;
+}
+/* ニューストピックス要素 */
+
+.news_meta h3 {
+  font-size: 20px;
+  margin: 20px 0;
+  line-height: 20px;
+}
+.bgskew:hover h3 a {
+  color: #fff;
+}
+.bgskew:hover .time {
+  color: #fff;
+}
+.bgskew:hover .category {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* news一覧レスポンシヴ */
+@media screen and (max-width: 1080px) {
+  .news_row ul li {
+    width: 48%;
+    margin: 2% auto;
+  }
+  .news_row ul li:nth-child(2n) {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .news_row ul li {
+    width: 90%;
+  }
+  .news_meta h3 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .news_meta {
+    padding: 10px;
+  }
+}
+
+/* ======================== */
+/* Topページコンタクト部分 */
+/* ======================== */
+#contact {
+  margin: 10% 0 0 0;
+  text-align: center;
+}
+#contact::before {
+  content: '';
+  background: url(../image/decoration/dec.svg) no-repeat center;
+  width: 60%;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -99;
+}
+
+#contact h2 {
+  font-size: 50px;
+  margin: 0 0 3% 0;
+}
+#contact h2 span {
+  font-size: 14px;
+  color: #C9171E;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 600;
+  display: block;
+}
+
+/* コンタクト中身のボックス要素 */
+.contact_box {
+  padding: 0 0 100px 0;
+}
+.contact_box .btn {
+  margin: 30px 0;
+}
+.contact_box p {
+  font-size: 16px;
+}
+.contact_box h4 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.contact_box h4 span {
+  display: block;
+}
+
+/* コンタクトボックスレスポンシヴ対応 */
+@media screen and (max-width: 480px) {
+  .contact_box {
+    padding: 20px 20px;
+  }
+  .contact_box p {
+    font-size: 14px;
+  }
+}

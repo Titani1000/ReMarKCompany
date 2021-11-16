@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+/* ============================= */
+/* トップ画像ファーストビュー */
+/* ============================= */
+#about_top {
+  background-size: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#about_view {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(../image/top/about_top.jpg) no-repeat top center;
+  background-size: cover;
+  transform-origin: center;
+}
+
+/* ================================= */
+/* 会社経営理念 or 私たちについて */
+/* ================================= */
+.mission_all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mission_img {
+  background: url(../image/few/about_us.jpg) no-repeat center;
+  width: 50%;
+  height: 100vh;
+  background-size: cover;
+}
+.mission_text {
+  text-align: right;
+  font-family: 'Scheherazade New', serif;
+  width: 50%;
+}
+.mission_text::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  top: 0;
+  right: -8%;
+  background: #f2f2f2 url(../image/decoration/noiz.jpg);
+  background-attachment: fixed;
+  z-index: -99;
+}
+
+.mission_text h2 {
+  font-size: 6em;
+  letter-spacing: 0.1em;
+}
+.mission_text h2::before {
+  content: '';
+  position: absolute;
+  border: 1px solid #0E192D;
+  width: 20%;
+  height: 5px;
+  top: 50%;
+  left: 30%;
+}
+.mission_text h3 {
+  font-size: 3em;
+}
+.mission_text h4 {
+  font-size: 2.5em;
+  color: #777;
+  font-weight: normal;
+}
+.mission_text p {
+  font-size: 1.5em;
+  line-height: 3em;
+}
+@media screen and (max-width: 1080px) {
+  .mission_text h2 {
+    font-size: 6em;
+    letter-spacing: 0.1em;
+  }
+  .mission_text h2::before {
+    left: 10%;
+  }
+  .mission_text h3 {
+    font-size: 2.5em;
+  }
+  .mission_text h4 {
+    font-size: 2.3em;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .mission_text h2 {
+    font-size: 4em;
+  }
+  .mission_text h2::before {
+    left: 15%;
+  }
+  .mission_text h3 {
+    font-size: 1.8em;
+  }
+  .mission_text h4 {
+    font-size: 1.5em;
+  }
+  .mission_text p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .mission_img {
+   width: 96%;
+   opacity: 0.7;
+   margin: 0 auto;
+  }
+  .mission_text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+  .mission_text h2 {
+    font-size: 4em;
+  }
+  .mission_text h2::before {
+    display: none;
+  }
+  .mission_text h3 {
+    font-size: 1.8em;
+  }
+  .mission_text h4 {
+    font-size: 1.5em;
+  }
+  .mission_text p {
+    font-size: 1em;
+  }
+
+  .mission_text::before {
+    display: none;
+  }
+}
+
+/* ========================== */
+/* 経営理念Visionについて */
+/* ========================== */
+.vision_all {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.vision_img {
+  background: url(../image/few/vision.jpg) no-repeat center;
+  width: 50%;
+  height: 50vh;
+  background-size: cover;
+}
+.vision_img img {
+  width: 100%;
+}
+.vision_catch {
+  width: 50%;
+  text-align: center;
+  font-family: 'Scheherazade New', serif;
+}
+.vision_catch h3 {
+  font-size: 3em;
+}
+.vision_catch h4 {
+  font-size: 2em;
+}
+.vision_catch::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: #0E192D;
+  opacity: 0.5;
+  width: 60%;
+  height: 30vh;
+  z-index: -99;
+}
+.vision_catch::after{
+  content: '';
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  background: #f2f2f2;
+  opacity: 0.5;
+  width: 60%;
+  height: 30vh;
+  z-index: -99;
+}
+/* Visiosレスポンシブ対応 */
+@media screen and (max-width: 1080px) {
+  .vision_catch h3 {
+    font-size: 2em;
+  }
+  .vision_catch h4 {
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 780px) {
+  .vision_catch h3 {
+    font-size: 1.3em;
+  }
+  .vision_catch h4 {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .vision_all {
+    margin: 3em 0 3em 0;
+  }
+  .vision_img {
+   width: 96%;
+   margin: 0 auto;
+  }
+  .vision_catch {
+    width: 100%;
+    position: absolute;
+  }
+  .vision_catch::before,
+  .vision_catch::after {
+   display: none;
+  }
+  .vision_catch h3 {
+    font-size: 1.3em;
+  }
+  .vision_catch h4 {
+    font-size: 1em;
+  }
+}
+
+
+/* =========== */
+/* 会社概要欄 */
+/* =========== */
+#kaisha {
+  margin: 5% 0;
+}
+
+.kaisha {
+  width: 80%;
+  margin: 3% auto;
+}
+  
+.kaisha th,
+.kaisha td {
+  border: 1px solid #707070;
+  padding: 20px;
+}
+
+.kaisha th {
+  font-weight: bold;
+  background-color: #0E192D;
+  color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  .kaisha {
+    margin: 50px auto;
+    width: 90%;
+  }
+  .kaisha,
+  .kaisha tr,
+  .kaisha td,
+  .kaisha th {
+    display:block;
+    text-align: center;
+  }
+  .kaisha th {
+    width:auto;
+    text-align: center;
+  }
+}
+
+/* =========== */
+/* 会社所在地 */
+/* =========== */
+/* アクセス要素CSS */
+.access_area {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #fff;
+  box-shadow: 0 4px 4px #ccc;
+  width: 90%;
+  margin: 50px auto 100px auto;
+}
+
+.access_area .access_map {
+  width: 50%;
+}
+
+/* アクセステキスト全体要素 */
+.access_area .access_block {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+/* アクセステキスト要素中身 */
+.access_box {
+  padding: 3em;
+}
+.access_box h3 {
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+.access_box h3 span {
+  display: block;
+  font-weight: normal;
+}
+
+/* アクセス レスポンシブ対応 タブレット版*/
+@media screen and (max-width: 780px) {
+  .access_area .access_map {
+    width: 100%;
+  }
+  .access_area .access_block {
+    width: 100%;
+  }
+  .access_area .access_box h3 {
+    font-size: 1em;
+  }
+}
+/* アクセスレスポンシブ対応 スマホ版 */
+@media screen and (max-width: 480px) {
+  .access_area .access_box h3 span {
+    font-size: 12px;
+  }
+  .access_box {
+    padding: 2em;
+  }
+}

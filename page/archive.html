@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+ <meta charset="utf-8">
+ <title>株式会社ReMarK</title>
+ <meta name="description" content="株式会社ReMarKはお客様の想いを形にという経営理念を掲げて日々活動しています。「想いを形に、理想を実現する」この言葉を胸にお客様の理想を実現させていただきます。">
+ <meta name="keywords" content="Web制作,プログラミング,IT">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta property="og:title" content="想いを形に、株式会社ReMarK"> 
+ <meta property="og:type" content="article">
+ <meta property="og:url" content="https://sarucode.site">
+ <meta property="og:image" content="img/logo.png">
+ <meta property="og:description" content="株式会社ReMarKはお客様の想いを形にという経営理念を掲げて日々活動しています。「想いを形に、理想を実現する」この言葉を胸にお客様の理想を実現させていただきます。"> 
+ <meta property="og:site_name" content="株式会社ReMarK">
+ <!-- サイトアイコン(favicon.ico) -->
+ <link rel="icon" type="image/svg+xml" href="../image/decoration/codersrank.svg">
+ <link rel="apple-touch-icon" sizes="180*180" href="../image/decoration/codersrank.svg">
+ <!-- 共通CSSファイル -->
+ <link rel="stylesheet" type="text/css" href="../base/reset.css">
+ <link rel="stylesheet" type="text/css" href="../base/common.css">
+ <link rel="stylesheet" type="text/css" href="../base/parts.css">
+ <link rel="stylesheet" type="text/css" href="../base/motion.css">
+<!-- 投稿用CSSファイル -->
+<link rel="stylesheet" type="text/css" href="../post/archive.css">
+<link rel="stylesheet" type="text/css" href="../post/single.css">
+ <!-- タブ別CSSファイル -->
+ <link rel="stylesheet" type="text/css" href="../main/index.css">
+ <link rel="stylesheet" type="text/css" href="../main/about.css">
+ <link rel="stylesheet" type="text/css" href="../main/service.css">
+ <link rel="stylesheet" type="text/css" href="../main/contact.css">
+ <!-- SCSS読み込み変換用CSSファイル -->
+ <link rel="stylesheet" type="text/css" href="../css/style.css">
+ <!-- SCSSファイル -->
+ <link rel="stylesheet" type="text/scss" href="../scss/style.scss">
+ <link rel="stylesheet" type="text/scss" href="../scss/_common.scss">
+ <link rel="stylesheet" type="text/scss" href="../scss/_color.scss">
+ <link rel="stylesheet" type="text/scss" href="../scss/_storage.scss">
+ <link rel="stylesheet" type="text/scss" href="../scss/_button.scss">
+ <!-- 外部リンクCDN -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+ </head>
+ <body>
+
+
+<!-- ローディング要素 -->
+<div id="splash"></div>
+  <div class="splashbg_left"></div>
+  <div class="splashbg_right"></div>
+<div id="container">
+
+ <!----- header----->
+ <header id="header">
+
+  <nav id="list" class="hMenu bottom_line">
+      <ul>
+        <li><a href="../index.html">TOP</a></li>
+        <li><a href="../page/about.html">ABOUT</a></li>
+        <li><a href="../page/archive.html">NEWS</a></li>
+        <li><a href="../page/service.html">SERVICE</a></li>
+        <li><a href="../page/contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- ヘッダーアイコン -->
+  <div class="fa_icon">
+    <ul>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+    </ul>
+  </div>
+
+  <!-- ハンバーガーメニュー要素 -->
+  <div class="menubtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+ </header>
+ <!----- /header ----->
+<!-- ファーストビュー要素トップ画像はタブごとに異なる -->
+<div id="archive_top" class="common">
+  <div class="ttl_block">
+    <h1>NEWS</h1>
+  </div>
+  <div id="archive_view"></div>
+  <a href="#">Scroll</a>
+</div>
+
+ <!----- main ----->
+ <main id="fixation">
+  <section id="information" class="wrapper">
+    <h2 class="heading">Offer Information<span>情報発信</span></h2>
+
+  <div class="information_list yohaku">
+  <!-- 記事要素1 -->
+    <article>
+      <div class="archive_img"><img src="../image/news/building.jpg" alt="ビルの画像"></div>
+      <div class="archive_text news_meta">
+        <span class="category">TOPICS</span>
+        <span class="time">2021/10.31</span>
+        <h3>新しく開発したアプリMarkinについて</h3>
+        <p>新しく作業自動化ツールである<br>
+          MarKinを作成しました。<br>
+          常日頃の業務を指定した時間にテンプレートを用いて<br>
+          作成してくれる便利なアプリです。
+          </p>
+        <a href="../page/single.html" class="single_btn borderleft"><span>Details</span></a>
+      </div>
+  </article>
+  <!-- 記事要素2 -->
+    <article>
+      <div class="archive_img"><img src="../image/news/news.jpg" alt="ビルの画像"></div>
+      <div class="archive_text news_meta">
+        <span class="topics">TOPICS</span>
+        <span class="time">2021/10.31</span>
+        <h3>システム開発によるサポート対応</h3>
+        <p>新しく作業自動化ツールである<br>
+          MarKinを作成しました。<br>
+          常日頃の業務を指定した時間にテンプレートを用いて<br>
+          作成してくれる便利なアプリです。
+          </p>
+          <a href="../page/single.html" class="single_btn borderleft"><span>Details</span></a>
+      </div>
+  </article>
+  <!-- 記事要素3 -->
+    <article>
+      <div class="archive_img"><img src="../image/news/news1.jpg" alt="ビルの画像"></div>
+      <div class="archive_text news_meta">
+        <span class="topics">TOPICS</span>
+        <span class="time">2021/10.31</span>
+        <h3>Web制作に関する取り組みについて</h3>
+        <p>新しく作業自動化ツールである<br>
+          MarKinを作成しました。<br>
+          常日頃の業務を指定した時間にテンプレートを用いて<br>
+          作成してくれる便利なアプリです。
+          </p>
+          <a href="../page/single.html" class="single_btn borderleft"><span>Details</span></a>
+      </div>
+  </article>
+  <!-- 記事要素4 -->
+    <article>
+      <div class="archive_img"><img src="../image/news/news2.jpg" alt="ビルの画像"></div>
+      <div class="archive_text news_meta">
+        <span class="topics">TOPICS</span>
+        <span class="time">2021/10.31</span>
+        <h3>株式会社リマークのチーム体制について</h3>
+        <p>新しく作業自動化ツールである<br>
+          MarKinを作成しました。<br>
+          常日頃の業務を指定した時間にテンプレートを用いて<br>
+          作成してくれる便利なアプリです。
+          </p>
+          <a href="../page/single.html" class="single_btn borderleft"><span>Details</span></a>
+      </div>
+  </article>
+
+    </div>
+  </section>
+ </main>
+ <!----- /main ----->
+ 
+ <!----- footer ----->
+ <footer id="footer">
+<div class="footer_list">
+  <h2>株式会社ReMarK</h2>
+
+  <div class="bottom_line">
+    <ul>
+      <li><a href="../index.html">TOP</a></li>
+      <li><a href="../page/about.html">ABOUT</a></li>
+      <li><a href="../page/archive.html">NEWS</a></li>
+      <li><a href="../page/service.html">SERVICE</a></li>
+      <li><a href="../page/contact.html">CONTACT</a></li>
+    </ul>
+  </div>
+
+  <div class="fa_icon">
+    <ul>
+      <li><a href=""><i class="fab fa-twitter"></i></a></li>
+      <li><a href=""><i class="fab fa-instagram"></i></a></li>
+      <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+    </ul>
+  </div>
+
+  <small>© ReMarK all rights reserved<span>こちらのサイトは架空のサイトです。</span></small>
+</div>
+ </footer>
+ <!----- /footer ----->
+
+</div><!-- ローディング閉じタグ -->
+
+  <!-- 外部CDN読み込み用 jQ -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <!-- Javascript用ファイル -->
+  <script src="../js/main.js"></script>
+ </body>
+</html>

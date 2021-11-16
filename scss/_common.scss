@@ -1,0 +1,358 @@
+// ============================================
+// ページごとの共通部分に関するCSSはこちらに書く
+// ============================================
+
+// =================
+// 共通ヘッダー部分
+// =================
+#header {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  // justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 0 4%;
+  z-index: 10;
+
+  #list ul {
+    display: flex;
+  
+    li {
+      margin: 0 20px;
+    }
+
+    a {
+      font-family: 'Scheherazade New', serif;
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+
+  .fa_icon {
+    margin-left: auto;
+    margin-right: 80px;
+    ul {
+      display: flex;
+      li {
+        margin: 0 20px;
+        a {
+          color: #fff;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+// ヘッダーレスポンシブ対応 タブレット版
+@media screen and (max-width: 780px) {
+  #header {
+    height: 80px;
+  
+    #list ul {
+    
+      li {
+        margin: 0 10px;
+      }
+  
+      a {
+        font-family: 'Scheherazade New', serif;
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+  
+    .fa_icon {
+      margin-left: auto;
+      margin-right: 50px;
+      ul {
+        display: flex;
+        li {
+          margin: 0 10px;
+          a {
+            color: #fff;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  
+}
+// ヘッダーレスポンシブ対応 モバイル版
+@media screen and (max-width: 480px) {
+  #header {
+    #list {
+      ul {
+        display: grid;
+      }
+    }
+    .fa_icon {
+      display: none;
+    }
+  }
+}
+
+// ========================
+// top見出し部分のCSS要素
+// ========================
+.ttl_block {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.ttl_block h1 {
+  font-size: 8em;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+  color: #fff;
+  text-decoration: 1px solid #ccc;
+  text-shadow: 
+       1px  1px 0px #0E192D,
+      -1px  1px 0px #0E192D,
+       1px -1px 0px #0E192D,
+      -1px -1px 0px #0E192D,
+       1px  0px 0px #0E192D,
+       0px  1px 0px #0E192D,
+      -1px  0px 0px #0E192D,
+       0px -1px 0px #0E192D;
+}
+
+// 共通Scrollダウン要素
+.common {
+  a {
+    font-family: 'Scheherazade New', serif;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    bottom: 5%;
+    z-index: 2;
+    padding: 10px 10px 110px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    writing-mode: vertical-lr;
+
+    &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    background: #fff;
+    animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .common a {
+    font-size: 14px;
+
+    &::after {
+      height: 80px;
+    }
+  }
+}
+
+// 下に向かって下がる要素CSS
+@keyframes sdl {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+// top部分の見出し要素 レスポンシヴ
+@media screen and (max-width: 1080px) {
+  .ttl_block h1 {
+    font-size: 7em;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .ttl_block h1 {
+    font-size: 5.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ttl_block h1 {
+    font-size: 3em;
+  }
+  #service_top .ttl_block h1 {
+    font-size: 2.5em;
+  }
+  #contact_top .ttl_block h1 {
+    font-size: 2.3em;
+  }  
+}
+
+// 各Sectionごとのサブタイトル要素共通部分
+.heading {
+  display: flex;
+  font-size: 50px;
+  padding: 0 0 0 10%;
+  align-items: center;
+}
+.heading::before {
+  content: '';
+  position: absolute;
+  border: 1px solid #222;
+  width: 8%;
+  height: 3px;
+  top: 50%;
+  left: 0;
+}
+.heading span {
+  color: #C9171E;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Noto Sans JP', sans-serif;
+  padding: 0 0 0 2%;
+}
+/* サブタイトル端末ごとのサイズ調整 */
+@media screen and (max-width: 780px) {
+  .heading {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .heading {
+    font-size: 24px;
+  }
+  .heading span {
+    padding: 0;
+    position: absolute;
+    bottom: -14px;
+  }
+}
+
+// ================
+// 共通フッター部分
+// ================
+#footer {
+  background: #0E192D;
+  text-align: center;
+  padding: 50px;
+  align-items: center;
+  flex-wrap: wrap;
+
+
+  .footer_list {
+    color: #fff;
+    h2 {
+      font-size: 30px;
+    }
+    small {
+      font-size: 10px;
+      font-weight: normal;
+
+      span {
+        display: block;
+        font-size: 10px;
+      }
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+
+      li {
+        margin: 0 20px;
+
+        a {
+          color: #fff;
+          font-family: 'Scheherazade New', serif;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+// フッター部分 レスポンシヴ
+@media screen and (max-width: 780px) {
+  
+  #footer {
+    padding: 30px;
+  
+    .footer_list {
+
+      h2 {
+        font-size: 24px;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+  
+        li {
+          margin: 0 10px;
+  
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  
+  #footer {
+    padding: 30px;
+  
+    .footer_list {
+
+      h2 {
+        font-size: 24px;
+      }
+      ul {
+        display: block;
+        justify-content: center;
+        padding: 10px 0;
+  
+        li {
+          margin: 0 10px;
+  
+          a {
+            font-size: 16px;
+          }
+        }
+      }
+
+      .fa_icon {
+        ul {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+// 各ページ共通の余白上下50px固定用
+.yohaku {
+  margin: 50px auto;
+}

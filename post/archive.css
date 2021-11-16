@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* ============================= */
+/* トップ画像ファーストビュー */
+/* ============================= */
+#archive_top {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#archive_view {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: url(../image/top/news_top.jpg) no-repeat top center;
+  background-size: cover;
+  transform-origin: center;
+}
+
+/* =============================== */
+/* お知らせ一覧アーカイブ要素 */
+/* =============================== */
+.information_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.information_list article {
+  width: 45%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 4px 4px #ccc;
+  margin: 10px auto;
+}
+/* お知らせ一覧逆対応 */
+.information_list article:nth-child(2n) {
+  top: 50px;
+}
+
+/* ニュースアーカイブ画像 */
+.archive_img {
+  width: 100%;
+  background-size: cover;
+}
+.archive_img img {
+  width: 100%;
+  height: 100%;
+  line-height: 1em;
+  vertical-align: bottom;
+  background-size: cover;
+}
+/* ニュースアーカイブテキストボックス要素 */
+.archive_text {
+  margin: 0 auto;
+}
+.archive_text h3 {
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+.archive_text p {
+  margin: 0 0 20px 0;
+}
+
+/* アーカイブレスポンシブ対応 タブレット版*/
+@media screen and (max-width: 780px) {
+  .archive_img {
+    width: 100%;
+    height: 100%;
+  }
+  .archive_text {
+    padding: 20px 0;
+    width: 90%;
+  }
+  .archive_text p {
+    text-align: left;
+  }
+}
+
+/* アーカイブレスポンシブ対応 スマホ版 */
+@media screen and (max-width: 480px) {
+  .information_list article {
+    width: 80%;
+  }
+  .archive_text h3 {
+    font-size: 0.8em;
+  }
+  .archive_text p {
+    font-size: 0.7em;
+  }
+  .information_list article:nth-child(2n) {
+    top: 0;
+  }
+}

@@ -1,0 +1,375 @@
+@charset "UTF-8";
+/* ================= */
+/* ローディング要素 */
+/* ================= */
+/* .splashbg_left,
+.splashbg_right {
+  display: none;
+} */
+
+/* body.appear  */
+.splashbg_left{
+  display: block;
+  content: "";
+  position:fixed;
+  z-index: 999;
+  width: 100%;
+  height: 50vh;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  background-color: #0E192D;
+  animation-name:PageAnimeLeft;
+  animation-duration:1.2s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode:forwards;
+}
+/* body.appear  */
+.splashbg_right{
+  display: block;
+  content: "";
+  position:fixed;
+  z-index: 999;
+  width: 100%;
+  height: 50vh;
+  bottom: 0;
+  right: 0;
+  transform: scaleX(0);
+  background-color: #0E192D;
+  animation-name:PageAnimeRight;
+  animation-duration:1.2s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode:forwards;
+}
+
+@keyframes PageAnimeLeft{
+	0% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+	50% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50.001% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+
+@keyframes PageAnimeRight{
+	0% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+	50% {
+		transform-origin:right;
+		transform:scaleX(1);
+	}
+	50.001% {
+		transform-origin:left;
+	}
+	100% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+}
+
+/* 画面遷移の後に現れるコンテンツ */
+#container {
+  opacity: 0;
+}
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 9999999;
+}
+
+/* ===================== */
+/* 各アニメーション要素 */
+/* ===================== */
+.floatUp {
+  animation: floatUpAnime 2s .3s ease-in-out infinite alternate;
+}
+
+@keyframes floatUpAnime {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.floatUp01 {
+	animation: floatUpSlow 3s .4s ease-in-out infinite alternate;
+}
+@keyframes floatUpSlow {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-10px);
+	}
+}
+
+/* =========================================== */
+/* ヘッダー並びにフッターの中心から線を伸ばす */
+/* =========================================== */
+.bottom_line ul li a::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 80%;
+	height: 2px;
+	background: #fff;
+	transition: all .3s;
+	transform: scale(0,1);
+	transform-origin: center top;
+}
+.bottom_line ul li a:hover::after {
+  transform: scale(1, 1);
+}
+
+/* ======================= */
+/* 左から右へ出現する要素 */
+/* ======================= */
+.bgextend{
+	animation-name:bgextendAnimeBase;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	position: relative;
+	overflow: hidden;
+	opacity:0;
+}
+
+@keyframes bgextendAnimeBase{
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;  
+}
+}
+
+/*中の要素*/
+.bgappear{
+	animation-name:bgextendAnimeSecond;
+	animation-duration: 1s;
+	/* animation-delay: 0.6s; */
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes bgextendAnimeSecond{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+/*左から右*/
+.bgLRextend::before{
+	animation-name:bgLRextendAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #0E192D;/*伸びる背景色の設定*/
+}
+@keyframes bgLRextendAnime{
+	0% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+	50% {
+		transform-origin:left;
+		transform:scaleX(1);
+	}
+	50.001% {
+		transform-origin:right;
+	}
+	100% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+}
+
+/* 右から左へ伸びるアニメーション */
+.bgRLextend::before{
+	animation-name:bgRLextendAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #0E192D;/*伸びる背景色の設定*/
+}
+@keyframes bgRLextendAnime{
+	0% {
+		transform-origin:right;
+		transform:scaleX(0);
+	}
+	50% {
+		transform-origin:right;
+		transform:scaleX(1);
+	}
+	50.001% {
+		transform-origin:left;
+	}
+	100% {
+		transform-origin:left;
+		transform:scaleX(0);
+	}
+}
+
+
+/* スクロールで動く要素拡大 */
+.zoomIn {
+  animation-name:zoomInAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes zoomInAnime{
+  from {
+  transform: scale(0.1);
+  opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+  	opacity: 1;
+  }
+}
+
+/* 上に上がる要素 */
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 左からクルっと回る要素 */
+.flipLeft {
+  animation-name: flipLeftAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  perspective-origin: left center;
+  opacity: 0;
+}
+@keyframes flipLeftAnime {
+  from {
+    transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+    opacity: 0;
+  }
+  to {
+    transform:  perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* 左から1文字ずつ出てくる要素 */
+.eachTextAnime span {
+	opacity: 0;
+}
+.eachTextAnime.appeartext span {
+	 animation:text_anime_on 1s ease-out forwards;
+}
+@keyframes text_anime_on {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+/* その場から出現するアニメーション */
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* モーションに対する時間調整用モーションディレイ */
+.motion_delay00 {
+  animation-delay: 0s;
+}
+.motion_delay02 {
+  animation-delay: 0.2s;
+}
+.motion_delay04 {
+  animation-delay: 0.4s;
+}
+.motion_delay06 {
+  animation-delay: 0.6s;
+}
+.motion_delay08 {
+  animation-delay: 0.8s;
+}
+
+/* =========================================== */
+/* スクロールしたら出現する要素のトリガー */
+/* =========================================== */
+
+.bgappearTrigger,
+.bgRLextendTrigger,
+.bgLRextendTrigger,
+.zoomInTrigger,
+.fadeTrigger,
+.flipTrigger,
+.fadeInTrigger {
+    opacity: 0;
+}
